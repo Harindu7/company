@@ -96,6 +96,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>company_repo</finalName>
 	</build>
 
 </project>
