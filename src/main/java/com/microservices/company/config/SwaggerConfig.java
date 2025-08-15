@@ -18,7 +18,7 @@ public class SwaggerConfig {
         devServer.setDescription("Local Development Server Company Management API");
 
         Info info = new Info()
-                .title("Company Management API")
+                .title("Test Company Management API")
                 .version("1.0")
                 .description("This API provides endpoints to manage company information.");
 
