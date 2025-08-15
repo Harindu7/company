@@ -1,7 +1,7 @@
 package com.microservices.company.controller;
 
-import com.microservices.company.model.entity.Company;
 import com.microservices.company.model.dto.CompanyRequest;
+import com.microservices.company.model.entity.Company;
 import com.microservices.company.service.CompanyService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

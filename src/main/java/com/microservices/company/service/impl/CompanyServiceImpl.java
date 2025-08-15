@@ -1,7 +1,7 @@
 package com.microservices.company.service.impl;
 
-import com.microservices.company.model.entity.Company;
 import com.microservices.company.model.dto.CompanyRequest;
+import com.microservices.company.model.entity.Company;
 import com.microservices.company.repository.CompanyRepository;
 import com.microservices.company.service.CompanyService;
 import lombok.RequiredArgsConstructor;

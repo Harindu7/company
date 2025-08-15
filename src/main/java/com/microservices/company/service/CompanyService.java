@@ -1,7 +1,8 @@
 package com.microservices.company.service;
 
-import com.microservices.company.model.entity.Company;
 import com.microservices.company.model.dto.CompanyRequest;
+import com.microservices.company.model.entity.Company;
+
 import java.util.List;
 import java.util.Optional;
 
