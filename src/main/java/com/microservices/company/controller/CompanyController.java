@@ -36,8 +36,6 @@ public class CompanyController {
 
     @GetMapping("/{id}")
     @Operation(summary = "Get company by ID")
-    @ApiResponse(responseCode = "200", description = "Company found")
-    @ApiResponse(responseCode = "404", description = "Company not found")
     public ResponseEntity<Company> getCompanyById(@PathVariable String id) {
         return companyService.getCompanyById(id)
                 .map(ResponseEntity::ok)
@@ -46,8 +44,6 @@ public class CompanyController {
 
     @PutMapping("/{id}")
     @Operation(summary = "Update company details")
-    @ApiResponse(responseCode = "200", description = "Company updated successfully")
-    @ApiResponse(responseCode = "404", description = "Company not found")
     public ResponseEntity<Company> updateCompany(@PathVariable String id, @RequestBody CompanyRequest request) {
         Company updatedCompany = companyService.updateCompany(id, request);
         return updatedCompany != null ? ResponseEntity.ok(updatedCompany) : ResponseEntity.notFound().build();
@@ -55,8 +51,6 @@ public class CompanyController {
 
     @PatchMapping("/{id}/deactivate")
     @Operation(summary = "Deactivate a company")
-    @ApiResponse(responseCode = "200", description = "Company deactivated successfully")
-    @ApiResponse(responseCode = "404", description = "Company not found")
     public ResponseEntity<Company> deactivateCompany(@PathVariable String id) {
         Company deactivatedCompany = companyService.deactivateCompany(id);
         return deactivatedCompany != null ? ResponseEntity.ok(deactivatedCompany) : ResponseEntity.notFound().build();

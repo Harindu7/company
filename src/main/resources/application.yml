@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGO_URI:mongodb://host.docker.internal:28017/companydb}
+      auto-index-creation: ${MONGO_AUTO_INDEX:true}
+  application:
+    name: ${APP_NAME:company-service}
+
+server:
+  port: ${SERVER_PORT:8081}
