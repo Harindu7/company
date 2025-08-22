@@ -8,3 +8,10 @@ spring:
 
 server:
   port: ${SERVER_PORT:8081}
+
+mongock:
+  migration-scan-package:
+    - com.microservices.company.migrations
+  fail-fast: true
+  change-log-collection-name: mongockChangeLog
+  lock-collection-name: mongockLock
