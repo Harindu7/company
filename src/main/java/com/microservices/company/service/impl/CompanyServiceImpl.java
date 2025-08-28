@@ -28,6 +28,7 @@ public class CompanyServiceImpl implements CompanyService {
                 .email(request.getEmail())
                 .description(request.getDescription())
                 .active(true)
+                .userCount(0)
                 .build();
         Company savedCompany = companyRepository.save(company);
         log.info("Successfully created company with ID: {}", savedCompany.getId());

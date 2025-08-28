@@ -21,4 +21,5 @@ public class Company {
     private String email;
     private boolean active = true;
     private String description;
+    private int userCount =0;
 }
