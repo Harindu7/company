@@ -12,4 +12,5 @@ public interface CompanyService {
     Optional<Company> getCompanyById(String id);
     Company updateCompany(String id, CompanyRequest request);
     Company deactivateCompany(String id);
+    Company incrementUserCount(String companyId);
 }

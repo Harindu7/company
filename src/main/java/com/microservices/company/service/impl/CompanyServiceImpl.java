@@ -90,4 +90,17 @@ public class CompanyServiceImpl implements CompanyService {
                     return null;
                 });
     }
+
+    @Override
+    public Company incrementUserCount(String companyId) {
+        log.info("Incrementing user count for company {}", companyId);
+        return companyRepository.findById(companyId)
+                .map(company -> {
+                    company.setUserCount(company.getUserCount() + 1);
+                    return companyRepository.save(company);
+                }).orElseGet(() -> {
+                    log.warn("Company not found: {}", companyId);
+                    return null;
+                });
+    }
 }
